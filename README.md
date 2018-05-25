@@ -7,7 +7,7 @@
 [![Build Status](https://travis-ci.org/amarkes/brmasker-ionic.svg?branch=master)](https://travis-ci.org/amarkes/br-masker-ionic-3)
 
 
-return custom mask in input for ionic 3
+return custom mask in input for ionic 3 - This is a fixed version for money mask
 
 # Required
 - node v8.2.1 or up

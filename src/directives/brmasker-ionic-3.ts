@@ -134,7 +134,15 @@ export class BrMaskerIonic3 implements OnInit, ControlValueAccessor {
   }
 
   private moneyMask(v: any): string {
-    var tmp = v+'';
+    let tmp = v+'';
+    let neg = false;
+    if(tmp.indexOf("-") == 0)
+    {
+      neg = true;
+      tmp = tmp.replace("-","");
+    }
+
+    if(tmp.length == 1) tmp = "0"+tmp
 
     tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
     if( tmp.length > 6)
@@ -146,7 +154,11 @@ export class BrMaskerIonic3 implements OnInit, ControlValueAccessor {
     if( tmp.length > 12)
       tmp = tmp.replace(/([0-9]{3}).([0-9]{3}).([0-9]{3}),([0-9]{2}$)/g,".$1.$2.$3,$4");
 
-    return tmp;
+    if(tmp.indexOf(".") == 0) tmp = tmp.replace(".","");
+    if(tmp.indexOf(",") == 0) tmp = tmp.replace(",","0,");
+
+    tmp = tmp.replace(/^00*/g, "");
+    return (neg ? '-'+tmp : tmp);
   }
 
   private onInput(value: any): void {

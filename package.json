@@ -1,7 +1,7 @@
 {
-  "name": "brmasker-ionic-3",
-  "version": "1.0.7",
-  "description": "mascara para inputs",
+  "name": "brmasker-ionic-3-plus",
+  "version": "1.0.8",
+  "description": "mascara para inputs - corrigida para funcionar como máscara de dinheiro",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amarkes/br-masker-ionic-3"
+    "url": "git+https://github.com/thiagoprz/br-masker-ionic-3"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago Przyczynski",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amarkes/br-masker-ionic-3/issues"
+    "url": "https://github.com/thiagoprz/br-masker-ionic-3/issues"
   },
   "devDependencies": {
     "@angular/common": "5.0.0",
